@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 6: Knowledge Representation & Reasoning</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Chapter 6: Knowledge Representation & Reasoning</h1>
+        <nav>
+            <a href="index.html">Back to Index</a> | 
+            <a href="chapter7.html">Next Chapter</a>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>6.1 What is Knowledge Representation?</h2>
+            <p>Knowledge representation is how an AI system stores and organizes information to enable reasoning and problem solving.</p>
+            <p><strong>Key Aspects:</strong></p>
+            <ul>
+                <li>Syntax: How knowledge is structured/formatted</li>
+                <li>Semantics: What knowledge means</li>
+                <li>Inference: How to derive new knowledge</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>6.2 Propositional Logic</h2>
+            <p>The simplest form of logical representation using propositions (statements that are true or false).</p>
+            <table>
+                <tr>
+                    <th>Operator</th>
+                    <th>Symbol</th>
+                    <th>Example</th>
+                </tr>
+                <tr>
+                    <td>AND (Conjunction)</td>
+                    <td>∧</td>
+                    <td>P ∧ Q</td>
+                </tr>
+                <tr>
+                    <td>OR (Disjunction)</td>
+                    <td>∨</td>
+                    <td>P ∨ Q</td>
+                </tr>
+                <tr>
+                    <td>NOT (Negation)</td>
+                    <td>¬</td>
+                    <td>¬P</td>
+                </tr>
+                <tr>
+                    <td>IMPLIES</td>
+                    <td>→</td>
+                    <td>P → Q</td>
+                </tr>
+                <tr>
+                    <td>EQUIVALENT</td>
+                    <td>↔</td>
+                    <td>P ↔ Q</td>
+                </tr>
+            </table>
+        </section>
+
+        <section>
+            <h2>6.3 First-Order Logic (FOL)</h2>
+            <p>More expressive than propositional logic, allowing:</p>
+            <ul>
+                <li>Objects and their relationships</li>
+                <li>Quantifiers (∀, ∃)</li>
+                <li>Variables, functions, predicates</li>
+            </ul>
+            <p><strong>Example:</strong> ∀x (Bird(x) → CanFly(x))</p>
+        </section>
+
+        <section>
+            <h2>6.4 Semantic Networks</h2>
+            <p>Graph-based representation showing relationships between concepts.</p>
+            <pre>
+            Animal
+              ↑
+            Bird → CanFly
+              ↑
+            Penguin → ¬CanFly
+            </pre>
+        </section>
+
+        <section>
+            <h2>6.5 Rule-Based Systems</h2>
+            <p>Knowledge represented as IF-THEN rules.</p>
+            <p><strong>Example:</strong><br>
+            IF temperature > 100 THEN patient has fever</p>
+        </section>
+
+        <section>
+            <h2>6.6 Reasoning Methods</h2>
+            <table>
+                <tr>
+                    <th>Method</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>Forward Chaining</td>
+                    <td>Start with known facts, apply rules to reach goal</td>
+                </tr>
+                <tr>
+                    <td>Backward Chaining</td>
+                    <td>Start with goal, work backwards to find supporting facts</td>
+                </tr>
+                <tr>
+                    <td>Resolution</td>
+                    <td>Proof by contradiction in logical systems</td>
+                </tr>
+            </table>
+        </section>
+
+        <section>
+            <h2>6.7 Frequently Asked Exam Questions</h2>
+            <ol>
+                <li>Compare propositional and first-order logic with examples.</li>
+                <li>Convert English statements to FOL expressions.</li>
+                <li>Explain forward vs backward chaining with medical diagnosis examples.</li>
+                <li>Draw a semantic network for a given domain.</li>
+                <li>What are the limitations of rule-based systems?</li>
+            </ol>
+        </section>
+    </main>
+
+    <footer>
+        <nav>
+            <a href="index.html">Back to Index</a> | 
+            <a href="chapter7.html">Next Chapter: Game Playing and Adversarial Search</a>
+        </nav>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice Questions Collection</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Practice Questions Collection</h1>
+        <nav>
+            <a href="index.html">Back to Index</a>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Core Concept Questions</h2>
+            <div class="question">
+                <h3>1. What are the six capabilities a computer must have to pass the Total Turing Test?</h3>
+                <div class="answer">
+                    <p>To pass the Total Turing Test, a computer system must demonstrate:</p>
+                    <ol>
+                        <li><strong>Natural Language Processing (NLP)</strong> - to communicate in natural human languages</li>
+                        <li><strong>Knowledge Representation</strong> - to store and retrieve general knowledge</li>
+                        <li><strong>Automated Reasoning</strong> - to use stored information to answer questions and draw new conclusions</li>
+                        <li><strong>Machine Learning</strong> - to adapt to new circumstances and detect patterns</li>
+                        <li><strong>Computer Vision</strong> - to perceive objects visually</li>
+                        <li><strong>Robotics (Motor Control)</strong> - to manipulate objects and move</li>
+                    </ol>
+                </div>
+            </div>
+
+            <div class="question">
+                <h3>2. Differentiate between a Goal-Based Agent and a Utility-Based Agent</h3>
+                <div class="answer">
+                    <table>
+                        <tr>
+                            <th>Feature</th>
+                            <th>Goal-Based Agent</th>
+                            <th>Utility-Based Agent</th>
+                        </tr>
+                        <tr>
+                            <td>Decision Basis</td>
+                            <td>Achieves defined goal(s)</td>
+                            <td>Maximizes a utility function</td>
+                        </tr>
+                        <tr>
+                            <td>Evaluation</td>
+                            <td>Binary (Goal achieved or not)</td>
+                            <td>Graded (How good is the state)</td>
+                        </tr>
+                        <tr>
+                            <td>Flexibility</td>
+                            <td>Lower</td>
+                            <td>Higher</td>
+                        </tr>
+                        <tr>
+                            <td>Example</td>
+                            <td>Path planning in maze</td>
+                            <td>Route optimization with fuel cost</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <h2>Heuristic Search & Pathfinding</h2>
+            <div class="question">
+                <h3>3. Follow the graph where edge weights show step costs and nodes show heuristic values. Find the most cost-effective path from start to goal using appropriate algorithms.</h3>
+                <div class="answer">
+                    <p><strong>Solution Approach:</strong></p>
+                    <ol>
+                        <li>Identify start and goal nodes</li>
+                        <li>Calculate f(n) = g(n) + h(n) for each node</li>
+                        <li>Apply A* search algorithm</li>
+                        <li>Track the path with lowest cumulative cost</li>
+                    </ol>
+                </div>
+            </div>
+
+            <div class="question">
+                <h3>4. Explain Alpha-Beta pruning. Define alpha and beta, and solve an example.</h3>
+                <div class="answer">
+                    <p><strong>Alpha-Beta Pruning:</strong> An optimization of minimax that eliminates unnecessary branches in game trees.</p>
+                    <ul>
+                        <li><strong>Alpha (α):</strong> Best value MAX can guarantee</li>
+                        <li><strong>Beta (β):</strong> Best value MIN can guarantee</li>
+                    </ul>
+                    <p>Prune when α ≥ β. Example:</p>
+                    <pre>
+         A (MAX)
+       /   |    \
+     3    12     8 → Prune anything > 8 under MIN
+                    </pre>
+                </div>
+            </div>
+
+            <h2>Predicted Exam Questions</h2>
+            <div class="question">
+                <h3>5. What is a learning agent? Draw and explain the conceptual diagram.</h3>
+                <div class="answer">
+                    <p>A <strong>Learning Agent</strong> improves its performance based on feedback from experience.</p>
+                    <p><strong>Components:</strong></p>
+                    <ul>
+                        <li><strong>Performance Element:</strong> Chooses external actions</li>
+                        <li><strong>Learning Element:</strong> Makes improvements</li>
+                        <li><strong>Critic:</strong> Evaluates performance</li>
+                        <li><strong>Problem Generator:</strong> Suggests exploratory actions</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="question">
+                <h3>6. Define the task environment and provide PEA descriptions for an autonomous taxi driver</h3>
+                <div class="answer">
+                    <table>
+                        <tr>
+                            <th>Component</th>
+                            <th>Description</th>
+                        </tr>
+                        <tr>
+                            <td>Performance</td>
+                            <td>Safety, speed, passenger comfort</td>
+                        </tr>
+                        <tr>
+                            <td>Environment</td>
+                            <td>Roads, traffic, weather conditions</td>
+                        </tr>
+                        <tr>
+                            <td>Actuators</td>
+                            <td>Steering, brakes, accelerator</td>
+                        </tr>
+                        <tr>
+                            <td>Sensors</td>
+                            <td>Cameras, LIDAR, GPS</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <div class="question">
+                <h3>7. Define CSP. Formulate 8-Queens as CSP.</h3>
+                <div class="answer">
+                    <p><strong>Constraint Satisfaction Problem (CSP)</strong> has:</p>
+                    <ul>
+                        <li><strong>Variables:</strong> Q1 to Q8</li>
+                        <li><strong>Domains:</strong> 1 to 8 (columns)</li>
+                        <li><strong>Constraints:</strong>
+                            <ul>
+                                <li>No two queens in same row</li>
+                                <li>No two queens in same column</li>
+                                <li>No two queens in same diagonal</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="question">
+                <h3>8. Distinguish between Predicate Logic and Propositional Logic.</h3>
+                <div class="answer">
+                    <table>
+                        <tr>
+                            <th>Feature</th>
+                            <th>Propositional Logic</th>
+                            <th>Predicate Logic</th>
+                        </tr>
+                        <tr>
+                            <td>Expressiveness</td>
+                            <td>Low</td>
+                            <td>High</td>
+                        </tr>
+                        <tr>
+                            <td>Uses</td>
+                            <td>Facts</td>
+                            <td>Facts + Relationships</td>
+                        </tr>
+                        <tr>
+                            <td>Example</td>
+                            <td>P ∨ Q</td>
+                            <td>Loves(John, Mary)</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <div class="question">
+                <h3>9. What is PDDL? Provide PDDL for Spare Tire Problem.</h3>
+                <div class="answer">
+                    <p><strong>Planning Domain Definition Language (PDDL)</strong></p>
+                    <p>Spare Tire:</p>
+                    <ul>
+                        <li><strong>Objects:</strong> spare, flat, axle</li>
+                        <li><strong>Initial:</strong> flat on axle, spare in trunk</li>
+                        <li><strong>Goal:</strong> spare on axle</li>
+                        <li><strong>Actions:</strong> Remove(flat), Remove(spare), PutOn(spare)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="question">
+                <h3>10. PEAS for various agents.</h3>
+                <div class="answer">
+                    <table>
+                        <tr>
+                            <th>Agent</th>
+                            <th>Performance</th>
+                            <th>Environment</th>
+                            <th>Actuators</th>
+                            <th>Sensors</th>
+                        </tr>
+                        <tr>
+                            <td>Self-driving Car</td>
+                            <td>Safety, speed</td>
+                            <td>Roads</td>
+                            <td>Wheels, brakes</td>
+                            <td>Cameras, GPS</td>
+                        </tr>
+                        <tr>
+                            <td>Vacuum Cleaner</td>
+                            <td>Cleanliness</td>
+                            <td>House floor</td>
+                            <td>Wheels, vacuum</td>
+                            <td>Dust sensor</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <div class="question">
+                <h3>11. Compare UCS, Greedy BFS, and A*</h3>
+                <div class="answer">
+                    <table>
+                        <tr>
+                            <th>Strategy</th>
+                            <th>f(n)</th>
+                            <th>Optimal</th>
+                            <th>Informed</th>
+                        </tr>
+                        <tr>
+                            <td>UCS</td>
+                            <td>g(n)</td>
+                            <td>Yes</td>
+                            <td>No</td>
+                        </tr>
+                        <tr>
+                            <td>Greedy BFS</td>
+                            <td>h(n)</td>
+                            <td>No</td>
+                            <td>Yes</td>
+                        </tr>
+                        <tr>
+                            <td>A*</td>
+                            <td>g(n) + h(n)</td>
+                            <td>Yes</td>
+                            <td>Yes</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <div class="question">
+                <h3>12. Define problem components using Mars Rover</h3>
+                <div class="answer">
+                    <ul>
+                        <li><strong>State space:</strong> All rover positions on Mars</li>
+                        <li><strong>Initial state:</strong> Starting point of rover</li>
+                        <li><strong>Actions:</strong> Move North, South, etc.</li>
+                        <li><strong>Transition model:</strong> New position = old + action</li>
+                        <li><strong>Path cost:</strong> Energy or time</li>
+                        <li><strong>Goal test:</strong> At sampling location</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="question">
+                <h3>13. Explain Genetic Algorithm with example</h3>
+                <div class="answer">
+                    <p><strong>Steps:</strong></p>
+                    <ol>
+                        <li>Initial Population</li>
+                        <li>Selection (based on fitness)</li>
+                        <li>Crossover</li>
+                        <li>Mutation</li>
+                        <li>New generation</li>
+                    </ol>
+                    <p><strong>Example:</strong> Maximize f(x) = (a+b)-(c+d)+(e+f)-(g+h)</p>
+                    <p>Chromosomes: 87126601, 65413532...</p>
+                    <p>Crossover at middle, mutation flips bit</p>
+                </div>
+            </div>
+
+            <div class="question">
+                <h3>14. Explain Wumpus World problem using Logic</h3>
+                <div class="answer">
+                    <ul>
+                        <li><strong>Percepts:</strong> Breeze, Stench</li>
+                        <li><strong>Rules:</strong> If breeze, then pit nearby</li>
+                        <li><strong>Represent in propositional logic:</strong>
+                            <ul>
+                                <li>B[1,1] → P[1,2] ∨ P[2,1]</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <p>Use resolution or model checking to infer safe paths.</p>
+                </div>
+            </div>
+
+            <div class="question">
+                <h3>15. Omniscient vs Rational Agents + Examples of AI apps</h3>
+                <div class="answer">
+                    <table>
+                        <tr>
+                            <th>Feature</th>
+                            <th>Omniscient</th>
+                            <th>Rational</th>
+                        </tr>
+                        <tr>
+                            <td>Knows all</td>
+                            <td>Yes</td>
+                            <td>No</td>
+                        </tr>
+                        <tr>
+                            <td>Chooses</td>
+                            <td>Perfect decision</td>
+                            <td>Best given knowledge</td>
+                        </tr>
+                    </table>
+                    <p><strong>Applications:</strong></p>
+                    <ol>
+                        <li>ChatGPT (NLP)</li>
+                        <li>Tesla Autopilot (Robotics)</li>
+                        <li>Google Search (Inference)</li>
+                        <li>Siri / Alexa (Voice Assistants)</li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <nav>
+            <a href="index.html">Back to Index</a>
+        </nav>
+    </footer>
+</body>
+</html>

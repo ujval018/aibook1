@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 7: Game Playing and Adversarial Search</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Chapter 7: Game Playing and Adversarial Search</h1>
+        <nav>
+            <a href="index.html">Back to Index</a> | 
+            <a href="chapter8.html">Next Chapter</a>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>7.1 Adversarial Search Basics</h2>
+            <p>Games with perfect information where players alternate moves:</p>
+            <ul>
+                <li>Initial state</li>
+                <li>Players (MAX and MIN)</li>
+                <li>Actions/legal moves</li>
+                <li>Terminal test</li>
+                <li>Utility function (win/lose/draw values)</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>7.2 Minimax Algorithm</h2>
+            <p>Optimal strategy for deterministic, perfect-information games:</p>
+            <ol>
+                <li>MAX player chooses move to maximize utility</li>
+                <li>MIN player chooses move to minimize utility</li>
+                <li>Alternate recursively until terminal state</li>
+            </ol>
+            <p>Time complexity: O(b<sup>d</sup>)</p>
+        </section>
+
+        <section>
+            <h2>7.3 Alpha-Beta Pruning</h2>
+            <p>Optimization of minimax that eliminates unnecessary branches:</p>
+            <ul>
+                <li>α = best value MAX can guarantee</li>
+                <li>β = best value MIN can guarantee</li>
+                <li>Prune when α ≥ β</li>
+            </ul>
+            <p>Can reduce time complexity to O(b<sup>d/2</sup>)</p>
+        </section>
+
+        <section>
+            <h2>7.4 Evaluation Functions</h2>
+            <p>Heuristics to estimate utility of non-terminal states:</p>
+            <ul>
+                <li>Chess: Material value, piece mobility, king safety</li>
+                <li>Checkers: Piece count, king count, board control</li>
+                <li>Should correlate with actual winning chances</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>7.5 Frequently Asked Exam Questions</h2>
+            <ol>
+                <li>Explain minimax with a game tree example.</li>
+                <li>How does alpha-beta pruning improve minimax?</li>
+                <li>Design an evaluation function for tic-tac-toe.</li>
+                <li>Compare perfect vs imperfect information games.</li>
+                <li>Why is minimax unsuitable for games like poker?</li>
+            </ol>
+        </section>
+    </main>
+
+    <footer>
+        <nav>
+            <a href="index.html">Back to Index</a> | 
+            <a href="chapter8.html">Next Chapter: Planning and PDDL</a>
+        </nav>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI Chapter 12: Predicted Questions</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background: #f5f5f5;
+      color: #333;
+    }
+    h1, h2 {
+      color: #222;
+      text-align: center;
+    }
+    .question {
+      background: #fff;
+      padding: 15px 20px;
+      margin: 20px 0;
+      border-left: 5px solid #3498db;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .question h3 {
+      color: #2c3e50;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+    table, th, td {
+      border: 1px solid #bbb;
+    }
+    th, td {
+      padding: 8px;
+      text-align: left;
+    }
+    .diagram {
+      font-style: italic;
+      color: #666;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>📘 AI Chapter 12: Top 20 Predicted Questions</h1>
+  <h2>🧠 With Full Answer Templates</h2>
+
+  <div class="question">
+    <h3>Q1. Define an intelligent agent. Give examples.</h3>
+    <p><strong>Agent:</strong> An agent perceives its environment through sensors and acts upon it using actuators.</p>
+    <p><strong>Intelligent Agent:</strong> An agent that acts rationally by taking the best possible action to maximize performance.</p>
+    <p><strong>Rationality:</strong> Choosing the action expected to maximize goal achievement based on percept history and built-in knowledge.</p>
+    <p><strong>Examples:</strong> 
+      <ul>
+        <li>Self-driving car – sensors (camera, radar), actuators (steering, brake)</li>
+        <li>Personal assistant (Siri, Alexa)</li>
+      </ul>
+    </p>
+    <p><strong>PEAS:</strong> Performance measure, Environment, Actuators, Sensors — used to define agent tasks.</p>
+    <div class="diagram">[Draw a labeled Agent-Environment Loop Diagram]</div>
+  </div>
+
+  <div class="question">
+    <h3>Q2. Compare Simple Reflex Agent vs Learning Agent.</h3>
+    <p>Agents can be categorized based on their capability to learn and remember.</p>
+    <table>
+      <thead>
+        <tr><th>Aspect</th><th>Simple Reflex Agent</th><th>Learning Agent</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Memory</td><td>No memory of past</td><td>Stores past experiences</td></tr>
+        <tr><td>Learning</td><td>Cannot learn</td><td>Improves via learning element</td></tr>
+        <tr><td>Goal-based</td><td>No goals</td><td>Goal-oriented behavior</td></tr>
+        <tr><td>Example</td><td>Vacuum cleaner</td><td>Chess-playing agent</td></tr>
+      </tbody>
+    </table>
+    <div class="diagram">[Include Learning Agent diagram: Learning Element, Performance Element, Critic, Problem Generator]</div>
+  </div>
+
+  <div class="question">
+    <h3>Q3. Classify task environments using 6 properties.</h3>
+    <p>Use <strong>FEDSSD</strong> to classify environments:</p>
+    <ul>
+      <li><strong>Fully/Partially Observable</strong></li>
+      <li><strong>Episodic/Sequential</strong></li>
+      <li><strong>Deterministic/Stochastic</strong></li>
+      <li><strong>Static/Dynamic</strong></li>
+      <li><strong>Discrete/Continuous</strong></li>
+      <li><strong>Single/Multi-agent</strong></li>
+    </ul>
+    <table>
+      <thead>
+        <tr><th>Agent</th><th>Properties</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Chess</td><td>Partially, Sequential, Deterministic, Static, Discrete, Multi-agent</td></tr>
+        <tr><td>Taxi</td><td>Partially, Sequential, Stochastic, Dynamic, Continuous, Multi-agent</td></tr>
+        <tr><td>Vacuum Cleaner</td><td>Partially, Episodic, Deterministic, Static, Discrete, Single-agent</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="question">
+    <h3>Q4. Define and explain BFS and DFS with one example.</h3>
+    <p><strong>BFS (Breadth-First Search):</strong> Explores level by level using a <em>queue</em>. Completeness: Yes. Optimal: Yes (unit cost).</p>
+    <p><strong>DFS (Depth-First Search):</strong> Explores depth-wise using a <em>stack</em> or recursion. Completeness: No. Optimal: No.</p>
+    <div class="diagram">[Draw a tree showing BFS vs DFS node expansion]</div>
+    <p><strong>Example:</strong> Finding node 'G' in a tree rooted at 'A'.</p>
+    <table>
+      <thead>
+        <tr><th>Criteria</th><th>BFS</th><th>DFS</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Data Structure</td><td>Queue</td><td>Stack</td></tr>
+        <tr><td>Space</td><td>O(b<sup>d</sup>)</td><td>O(bd)</td></tr>
+        <tr><td>Time</td><td>O(b<sup>d</sup>)</td><td>O(b<sup>m</sup>)</td></tr>
+        <tr><td>Optimal</td><td>Yes (if cost=1)</td><td>No</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="question">
+    <h3>Q5. Solve a given graph using UCS and A*.</h3>
+    <p><strong>Uniform Cost Search (UCS):</strong> Expands nodes with lowest path cost g(n).</p>
+    <p><strong>A* Search:</strong> Uses f(n) = g(n) + h(n), where h(n) is a heuristic estimate to goal.</p>
+    <p><strong>Example Graph:</strong> A connected graph with nodes A to G, each with edge costs and heuristic values.</p>
+    <table>
+      <thead>
+        <tr><th>Node</th><th>g(n)</th><th>h(n)</th><th>f(n) = g(n) + h(n)</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>A</td><td>0</td><td>10</td><td>10</td></tr>
+        <tr><td>B</td><td>2</td><td>8</td><td>10</td></tr>
+        <tr><td>C</td><td>4</td><td>5</td><td>9</td></tr>
+        <!-- add more rows as per the graph -->
+      </tbody>
+    </table>
+    <p>• UCS expands the lowest g(n). A* expands lowest f(n).</p>
+    <div class="diagram">[Show step-by-step expansion and final path traced]</div>
+  </div>
+
+  <div class="question">
+    <h3>Q6. Define admissible and consistent heuristics.</h3>
+    <p><strong>Admissible Heuristic:</strong> A heuristic h(n) is admissible if it never overestimates the cost to reach the goal from node n. Formally:</p>
+    <p><code>h(n) ≤ h<sub>*</sub>(n)</code> for all n, where h<sub>*</sub>(n) is the true cost to reach the goal.</p>
+    <p><strong>Consistent (Monotonic) Heuristic:</strong> A heuristic h(n) is consistent if:</p>
+    <p><code>h(n) ≤ c(n, a, n') + h(n')</code> for every node n and successor n', where c(n, a, n') is the cost of action a.</p>
+    <ul>
+      <li>Every consistent heuristic is also admissible.</li>
+    </ul>
+    <p><strong>Example (8-Puzzle):</strong></p>
+    <ul>
+      <li><em>h₁(n)</em> = number of misplaced tiles → admissible</li>
+      <li><em>h₂(n)</em> = total Manhattan distance → admissible and consistent</li>
+    </ul>
+    <p><strong>Impact on A*:</strong></p>
+    <ul>
+      <li>Admissibility ensures A* is optimal.</li>
+      <li>Consistency allows A* to avoid re-visiting nodes.</li>
+    </ul>
+  </div>
+
+  <div class="question">
+    <h3>Q7. Explain CSP with an example.</h3>
+    <p><strong>Constraint Satisfaction Problem (CSP):</strong> A CSP is defined by:</p>
+    <ul>
+      <li><strong>Variables:</strong> X = {X₁, X₂, ..., Xn}</li>
+      <li><strong>Domains:</strong> D = {D₁, D₂, ..., Dn}, where Di is the possible values for Xi</li>
+      <li><strong>Constraints:</strong> Rules restricting combinations of values (e.g., X ≠ Y)</li>
+    </ul>
+    <p><strong>Example – Map Coloring:</strong></p>
+    <ul>
+      <li>Variables: WA, NT, SA, Q, NSW, V, T</li>
+      <li>Domains: {Red, Green, Blue}</li>
+      <li>Constraints: Adjacent regions must have different colors (e.g., WA ≠ NT)</li>
+    </ul>
+    <div class="diagram">[Draw a map of Australia showing connected regions]</div>
+    <p><strong>Alternate Example – SEND + MORE = MONEY:</strong></p>
+    <ul>
+      <li>Variables: S, E, N, D, M, O, R, Y</li>
+      <li>Domain: 0–9</li>
+      <li>Constraint: All digits must be different, M ≠ 0, and the sum must satisfy the equation.</li>
+    </ul>
+    <div class="diagram">[Draw constraint graph with nodes and binary constraints]</div>
+  </div>
+
+  <div class="question">
+    <h3>Q8. What is arc consistency? Explain AC-3.</h3>
+    <p><strong>Arc Consistency:</strong> An arc X → Y is consistent if for every value in the domain of X, there is some allowed value in Y satisfying the constraint.</p>
+    <p><strong>AC-3 Algorithm:</strong> A popular algorithm to enforce arc consistency on all arcs in a CSP.</p>
+    <p><strong>Steps:</strong></p>
+    <ol>
+      <li>Initialize queue with all arcs</li>
+      <li>While queue not empty:
+        <ul>
+          <li>Remove (Xi, Xj)</li>
+          <li>If domain of Xi is revised, add all arcs (Xk, Xi) back</li>
+        </ul>
+      </li>
+    </ol>
+    <p><strong>Pseudocode:</strong></p>
+    <pre>
+function AC-3(csp):
+    queue ← all arcs in csp
+    while queue is not empty do:
+        (Xi, Xj) ← REMOVE-FIRST(queue)
+        if REVISE(csp, Xi, Xj) then
+            if domain of Xi is empty then return false
+            for each Xk in neighbors[Xi] do
+                add (Xk, Xi) to queue
+    return true
+    </pre>
+    <p><strong>Example:</strong> X ∈ {1,2,3}, Y ∈ {2,3}, with constraint X &lt; Y → Remove 3 from X</p>
+  </div>
+
+  <div class="question">
+    <h3>Q9. Translate English statements to First-Order Logic (FOL).</h3>
+    <p><strong>Step-by-Step Method:</strong></p>
+    <ol>
+      <li><strong>Identify Quantifiers</strong> (∀, ∃)</li>
+      <li><strong>Find Predicates</strong> (e.g., Human(x), Mortal(x))</li>
+      <li><strong>Construct implication</strong></li>
+    </ol>
+    <p><strong>Example 1:</strong> “All humans are mortal”</p>
+    <p>FOL: <code>∀x (Human(x) → Mortal(x))</code></p>
+    <p><strong>Example 2:</strong> “Some birds can fly”</p>
+    <p>FOL: <code>∃x (Bird(x) ∧ CanFly(x))</code></p>
+    <p><strong>Example 3:</strong> “Every student loves some subject”</p>
+    <p>FOL: <code>∀x (Student(x) → ∃y (Subject(y) ∧ Loves(x, y)))</code></p>
+  </div>
+
+  <div class="question">
+    <h3>Q10. What is entailment? Compare model checking vs theorem proving.</h3>
+    <p><strong>Entailment (⊨):</strong> A sentence α entails β if β is true in all models where α is true.</p>
+    <p>α ⊨ β ⇔ In every model where α is true, β is also true.</p>
+    <p><strong>Approaches to Test Entailment:</strong></p>
+    <table>
+      <thead>
+        <tr><th>Method</th><th>Description</th><th>Example</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Model Checking</td>
+          <td>Enumerate all models and check if β holds when α is true</td>
+          <td>Small logical domains</td>
+        </tr>
+        <tr>
+          <td>Theorem Proving</td>
+          <td>Use inference rules (e.g., Modus Ponens) to derive β from α</td>
+          <td>Prolog, logic-based AI</td>
+        </tr>
+      </tbody>
+    </table>
+    <p><strong>Example:</strong> If α = “It is raining → ground is wet”, β = “If raining, ground is wet” → α ⊨ β</p>
+  </div>
+  <div class="question">
+    <h3>Q11. Explain Minimax algorithm with a game tree.</h3>
+    <p><strong>Minimax Algorithm:</strong> A decision rule for minimizing the possible loss in a worst-case scenario. Used in 2-player, turn-based games like Tic-Tac-Toe, Chess.</p>
+    <ul>
+      <li><strong>MAX:</strong> Tries to maximize the score</li>
+      <li><strong>MIN:</strong> Tries to minimize MAX’s score</li>
+    </ul>
+    <p><strong>Game Tree:</strong></p>
+    <ul>
+      <li>Nodes: Game states</li>
+      <li>Edges: Moves</li>
+    </ul>
+    <div class="diagram">
+      <pre>
+            MAX
+         /   |   \
+       3     12    8
+      ↑     ↑     ↑
+      MIN  MIN   MIN
+      </pre>
+    </div>
+    <p><strong>Propagation:</strong> MIN selects min(3,12,8) → MAX chooses max(3,8,12) = <b>12</b></p>
+  </div>
+
+  <div class="question">
+    <h3>Q12. What is alpha-beta pruning? Show how it works.</h3>
+    <p><strong>Alpha-Beta Pruning:</strong> Optimization of the Minimax algorithm that avoids exploring parts of the tree that won't affect the final decision.</p>
+    <ul>
+      <li><strong>α (Alpha):</strong> Best value MAX can guarantee</li>
+      <li><strong>β (Beta):</strong> Best value MIN can guarantee</li>
+    </ul>
+    <p><strong>Condition for Pruning:</strong> If β ≤ α, prune the branch</p>
+    <div class="diagram">
+      <pre>
+        MAX
+       /    \
+     MIN    MIN
+    / | \   / | \
+   3  5  6  1  (7) ← pruned
+      </pre>
+    </div>
+    <p>Pruning improves efficiency without changing the result.</p>
+  </div>
+
+  <div class="question">
+    <h3>Q13. Define a planning problem with STRIPS.</h3>
+    <p><strong>Planning:</strong> Finding a sequence of actions from initial state to goal state.</p>
+    <p><strong>STRIPS (Stanford Research Institute Problem Solver):</strong> Framework for automated planning.</p>
+    <p><strong>Elements:</strong></p>
+    <ul>
+      <li><strong>Initial State</strong></li>
+      <li><strong>Goal State</strong></li>
+      <li><strong>Actions</strong> with:
+        <ul>
+          <li><strong>Preconditions</strong></li>
+          <li><strong>Add List</strong></li>
+          <li><strong>Delete List</strong></li>
+        </ul>
+      </li>
+    </ul>
+    <p><strong>Example – Spare Tire Problem:</strong></p>
+    <ul>
+      <li><strong>Initial State:</strong> Flat(tire1), Inflated(spare), In(trunk, spare)</li>
+      <li><strong>Goal State:</strong> Inflated(tire1), On(car, tire1)</li>
+      <li><strong>Action – Remove(spare):</strong>
+        <ul>
+          <li>Pre: In(trunk, spare)</li>
+          <li>Add: At(spare)</li>
+          <li>Delete: In(trunk, spare)</li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+
+  <div class="question">
+    <h3>Q14. What is PDDL? Write PDDL for a pickup action.</h3>
+    <p><strong>PDDL (Planning Domain Definition Language):</strong> A standard language for expressing planning domains and problems.</p>
+    <p><strong>Structure:</strong></p>
+    <ul>
+      <li><code>:action</code> – action name</li>
+      <li><code>:parameters</code> – variables used</li>
+      <li><code>:precondition</code> – conditions required before action</li>
+      <li><code>:effect</code> – outcome after performing action</li>
+    </ul>
+    <p><strong>Example – Pickup Action:</strong></p>
+    <pre>
+(:action pickup
+  :parameters (?obj ?loc)
+  :precondition (and (at ?obj ?loc) (handempty))
+  :effect (and (holding ?obj) (not (at ?obj ?loc)) (not (handempty)))
+)
+    </pre>
+    <p>This defines that the agent can pick up an object if it's at a location and the agent’s hand is empty.</p>
+  </div>
+
+  <div class="question">
+    <h3>Q15. Explain components of a learning agent.</h3>
+    <p><strong>Learning Agent:</strong> An agent that can learn from experience and improve its performance.</p>
+    <p><strong>Components:</strong></p>
+    <ul>
+      <li><strong>Learning Element:</strong> Makes improvements based on feedback</li>
+      <li><strong>Performance Element:</strong> Chooses external actions</li>
+      <li><strong>Critic:</strong> Provides feedback on performance</li>
+      <li><strong>Problem Generator:</strong> Suggests exploratory actions</li>
+    </ul>
+    <div class="diagram">
+      [Diagram: Performance Element → Environment → Critic → Learning Element → Performance Element (cycle)]
+    </div>
+    <p><strong>Example:</strong> A chess-playing robot:
+      <ul>
+        <li>Performance element plays the game</li>
+        <li>Critic evaluates win/loss</li>
+        <li>Learning element adjusts strategy</li>
+        <li>Problem generator tries new openings</li>
+      </ul>
+    </p>
+  </div>
+  <div class="question">
+    <h3>Q16. Differentiate Supervised, Unsupervised, and Reinforcement Learning.</h3>
+    <p><strong>Supervised Learning:</strong> Model learns from labeled data.</p>
+    <p><strong>Unsupervised Learning:</strong> Model identifies patterns in unlabeled data.</p>
+    <p><strong>Reinforcement Learning (RL):</strong> Agent learns through trial-and-error with rewards and punishments.</p>
+    <table border="1" cellpadding="5">
+      <tr>
+        <th>Type</th>
+        <th>Data</th>
+        <th>Goal</th>
+        <th>Example</th>
+      </tr>
+      <tr>
+        <td>Supervised</td>
+        <td>Labeled</td>
+        <td>Predict output</td>
+        <td>Email spam detection</td>
+      </tr>
+      <tr>
+        <td>Unsupervised</td>
+        <td>Unlabeled</td>
+        <td>Find structure/patterns</td>
+        <td>Customer segmentation</td>
+      </tr>
+      <tr>
+        <td>Reinforcement</td>
+        <td>Interaction with environment</td>
+        <td>Maximize reward</td>
+        <td>Game-playing agent (e.g., AlphaGo)</td>
+      </tr>
+    </table>
+    <p><strong>Key RL Terms:</strong> <b>Reward</b> (feedback signal), <b>Policy</b> (strategy to choose actions)</p>
+  </div>
+
+  <div class="question">
+    <h3>Q17. What are the main tasks in NLP?</h3>
+    <p><strong>Natural Language Processing (NLP)</strong> enables machines to understand and generate human language.</p>
+    <p><strong>Main Tasks:</strong></p>
+    <ul>
+      <li><strong>Tokenization:</strong> Breaking text into words/sentences<br>
+        <i>Example:</i> "AI is fun" → [AI, is, fun]</li>
+      <li><strong>POS Tagging:</strong> Assigning parts of speech to each word<br>
+        <i>Example:</i> "Cats sleep" → Cats (Noun), sleep (Verb)</li>
+      <li><strong>NER (Named Entity Recognition):</strong> Identifying entities<br>
+        <i>Example:</i> "Obama visited India" → [Obama: Person, India: Country]</li>
+      <li><strong>Parsing:</strong> Analyzing grammatical structure (syntax tree)</li>
+    </ul>
+    <p><strong>Applications:</strong> Chatbots, Machine Translation, Sentiment Analysis</p>
+  </div>
+
+  <div class="question">
+    <h3>Q18. Describe an expert system. What are its components?</h3>
+    <p><strong>Expert System:</strong> A computer system that emulates decision-making ability of a human expert.</p>
+    <p><strong>Components:</strong></p>
+    <ul>
+      <li><strong>Knowledge Base:</strong> Contains domain-specific facts and rules</li>
+      <li><strong>Inference Engine:</strong> Applies logic to knowledge base to infer conclusions</li>
+      <li><strong>User Interface (UI):</strong> Interacts with the user</li>
+    </ul>
+    <div class="diagram">
+      [Diagram: User ↔ UI ↔ Inference Engine ↔ Knowledge Base]
+    </div>
+    <p><strong>Example:</strong> MYCIN (medical diagnosis expert system)</p>
+  </div>
+
+  <div class="question">
+    <h3>Q19. Differentiate between forward and backward chaining.</h3>
+    <p><strong>Forward Chaining:</strong> Starts from known facts and applies inference rules to reach goal.</p>
+    <p><strong>Backward Chaining:</strong> Starts from goal and works backwards to determine supporting facts.</p>
+    <table border="1" cellpadding="5">
+      <tr>
+        <th>Aspect</th>
+        <th>Forward Chaining</th>
+        <th>Backward Chaining</th>
+      </tr>
+      <tr>
+        <td>Direction</td>
+        <td>Data → Goal</td>
+        <td>Goal → Data</td>
+      </tr>
+      <tr>
+        <td>Use Case</td>
+        <td>Data-driven systems</td>
+        <td>Goal-driven reasoning</td>
+      </tr>
+      <tr>
+        <td>Example</td>
+        <td>Rule-based expert system</td>
+        <td>Prolog program</td>
+      </tr>
+    </table>
+    <p><strong>Example:</strong> If A → B, B → C<br>Known: A<br>Forward chaining → conclude C<br>Backward chaining ← Start from C, prove A</p>
+  </div>
+
+  <div class="question">
+    <h3>Q20. Write short notes on:</h3>
+    <h4>(a) STRIPS</h4>
+    <p><strong>STRIPS:</strong> A formal language to define planning problems using states and actions.<br>
+    Contains: Preconditions, Add, Delete lists.<br>
+    <i>Example:</i> Move(robot, A, B)</p>
+
+    <h4>(b) Turing Test</h4>
+    <p><strong>Turing Test:</strong> Proposed by Alan Turing to evaluate machine intelligence. A machine passes if it can fool a human into thinking it’s also human during conversation.</p>
+
+    <h4>(c) Reflex Agent</h4>
+    <p><strong>Reflex Agent:</strong> Acts based only on current percept.<br>
+    <i>Example:</i> Thermostat turns on/off heater based on temperature.</p>
+  </div>
+
+</body>
+</html>

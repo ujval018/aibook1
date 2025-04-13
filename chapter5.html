@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 5: Constraint Satisfaction Problems</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Chapter 5: Constraint Satisfaction Problems</h1>
+        <nav>
+            <a href="index.html">Back to Index</a> | 
+            <a href="chapter6.html">Next Chapter</a>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>5.1 What is a CSP?</h2>
+            <p>A Constraint Satisfaction Problem is a type of problem where:</p>
+            <ul>
+                <li>The solution must satisfy constraints (rules).</li>
+                <li>You don’t need to search through all paths or actions — just find values for variables.</li>
+            </ul>
+            <p><strong>CSP = Find valid values</strong></p>
+        </section>
+
+        <section>
+            <h2>5.2 Components of a CSP</h2>
+            <table>
+                <tr>
+                    <th>Component</th>
+                    <th>Description</th>
+                    <th>Example: Map Coloring</th>
+                </tr>
+                <tr>
+                    <td>Variables</td>
+                    <td>The items to assign values to</td>
+                    <td>Regions: A, B, C</td>
+                </tr>
+                <tr>
+                    <td>Domains</td>
+                    <td>Allowed values for each variable</td>
+                    <td>Colors: Red, Green, Blue</td>
+                </tr>
+                <tr>
+                    <td>Constraints</td>
+                    <td>Rules that limit how variables can be assigned</td>
+                    <td>Adjacent regions ≠ same color</td>
+                </tr>
+            </table>
+        </section>
+
+        <section>
+            <h2>5.3 Types of Constraints</h2>
+            <table>
+                <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                    <th>Example</th>
+                </tr>
+                <tr>
+                    <td>Unary</td>
+                    <td>Applies to a single variable</td>
+                    <td>A ≠ Red</td>
+                </tr>
+                <tr>
+                    <td>Binary</td>
+                    <td>Applies between two variables</td>
+                    <td>A ≠ B</td>
+                </tr>
+                <tr>
+                    <td>Higher-Order</td>
+                    <td>Involves 3 or more variables in a rule</td>
+                    <td>A ≠ B ≠ C</td>
+                </tr>
+                <tr>
+                    <td>Global Constraints</td>
+                    <td>Apply to large sets, often patterns</td>
+                    <td>"AllDifferent" in Sudoku</td>
+                </tr>
+            </table>
+        </section>
+
+        <section>
+            <h2>5.4 Solving CSPs: Techniques</h2>
+            <h3>Backtracking Search</h3>
+            <p>Try assigning values one by one, and backtrack when a constraint is violated.</p>
+            <p>Recursive, depth-first search approach.</p>
+
+            <h3>Forward Checking</h3>
+            <p>After assigning a variable, look ahead and remove values from other variable domains that are no longer valid.</p>
+
+            <h3>Constraint Propagation</h3>
+            <p>Propagate changes to narrow down possible values in all related variables.</p>
+        </section>
+
+        <section>
+            <h2>5.5 Frequently Asked Exam Questions</h2>
+            <ol>
+                <li>Define CSP. Explain components with examples.</li>
+                <li>What is constraint propagation? How does it differ from forward checking?</li>
+                <li>Solve the following map coloring problem with a constraint graph.</li>
+                <li>Define arc consistency. Explain AC-3 with a suitable example.</li>
+                <li>Compare backtracking, forward checking, and constraint propagation.</li>
+            </ol>
+        </section>
+    </main>
+
+    <footer>
+        <nav>
+            <a href="index.html">Back to Index</a> | 
+            <a href="chapter6.html">Next Chapter: Knowledge Representation & Reasoning</a>
+        </nav>
+    </footer>
+</body>
+</html>

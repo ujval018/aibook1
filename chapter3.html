@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 3: Task Environments</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Chapter 3: Task Environments</h1>
+        <nav>
+            <a href="index.html">Back to Index</a> | 
+            <a href="chapter4.html">Next Chapter</a>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>3.1 What is a Task Environment?</h2>
+            <p>A task environment is the problem to which an agent is the solution. It consists of:</p>
+            <ul>
+                <li><strong>Performance measure</strong>: How we evaluate the agent's success</li>
+                <li><strong>Environment</strong>: The world the agent operates in</li>
+                <li><strong>Actuators</strong>: How the agent affects the environment</li>
+                <li><strong>Sensors</strong>: How the agent perceives the environment</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>3.2 Properties of Task Environments</h2>
+            <table>
+                <tr>
+                    <th>Property</th>
+                    <th>Description</th>
+                    <th>Example</th>
+                </tr>
+                <tr>
+                    <td>Fully Observable</td>
+                    <td>Agent can see complete state</td>
+                    <td>Chess (vs Poker)</td>
+                </tr>
+                <tr>
+                    <td>Deterministic</td>
+                    <td>Next state depends only on current state + action</td>
+                    <td>Taxi navigation (vs Poker)</td>
+                </tr>
+                <tr>
+                    <td>Episodic</td>
+                    <td>Actions divided into atomic episodes</td>
+                    <td>Image classification</td>
+                </tr>
+                <tr>
+                    <td>Static</td>
+                    <td>Environment doesn't change while agent deliberates</td>
+                    <td>Crossword puzzle</td>
+                </tr>
+                <tr>
+                    <td>Discrete</td>
+                    <td>Finite number of states/actions</td>
+                    <td>Chess (vs autonomous driving)</td>
+                </tr>
+                <tr>
+                    <td>Single Agent</td>
+                    <td>No other agents affecting environment</td>
+                    <td>Sudoku solver</td>
+                </tr>
+            </table>
+        </section>
+
+        <section>
+            <h2>3.3 Environment Types</h2>
+            <h3>Fully Observable vs Partially Observable</h3>
+            <p><strong>Fully Observable:</strong> Agent sensors give access to complete state of environment (e.g., chess)</p>
+            <p><strong>Partially Observable:</strong> Agent has limited/partial information (e.g., poker, real-world navigation)</p>
+
+            <h3>Deterministic vs Stochastic</h3>
+            <p><strong>Deterministic:</strong> Next state completely determined by current state + action (e.g., solving a puzzle)</p>
+            <p><strong>Stochastic:</strong> Some randomness in outcomes (e.g., robot navigation with sensor noise)</p>
+
+            <h3>Episodic vs Sequential</h3>
+            <p><strong>Episodic:</strong> Each action independent of previous ones (e.g., image classification)</p>
+            <p><strong>Sequential:</strong> Current decision affects future ones (e.g., chess, navigation)</p>
+        </section>
+
+        <section>
+            <h2>3.4 Common Task Environments</h2>
+            <table>
+                <tr>
+                    <th>Environment</th>
+                    <th>Observability</th>
+                    <th>Determinism</th>
+                    <th>Episodic/Sequential</th>
+                    <th>Static/Dynamic</th>
+                </tr>
+                <tr>
+                    <td>Chess</td>
+                    <td>Fully</td>
+                    <td>Deterministic</td>
+                    <td>Sequential</td>
+                    <td>Semi-static</td>
+                </tr>
+                <tr>
+                    <td>Poker</td>
+                    <td>Partial</td>
+                    <td>Stochastic</td>
+                    <td>Sequential</td>
+                    <td>Dynamic</td>
+                </tr>
+                <tr>
+                    <td>Robot Navigation</td>
+                    <td>Partial</td>
+                    <td>Stochastic</td>
+                    <td>Sequential</td>
+                    <td>Dynamic</td>
+                </tr>
+                <tr>
+                    <td>Image Classification</td>
+                    <td>Fully</td>
+                    <td>Deterministic</td>
+                    <td>Episodic</td>
+                    <td>Static</td>
+                </tr>
+                <tr>
+                    <td>Medical Diagnosis</td>
+                    <td>Partial</td>
+                    <td>Stochastic</td>
+                    <td>Sequential</td>
+                    <td>Dynamic</td>
+                </tr>
+            </table>
+        </section>
+
+        <section>
+            <h2>3.5 Frequently Asked Exam Questions</h2>
+            <ol>
+                <li>Compare and contrast fully observable and partially observable environments with examples.</li>
+                <li>Why is chess considered a deterministic environment while poker is stochastic?</li>
+                <li>Explain how the properties of an environment affect agent design choices.</li>
+                <li>Classify the following environments: self-driving car, spam filter, chess AI, weather prediction system.</li>
+                <li>What makes an environment dynamic versus static? Give two examples of each.</li>
+            </ol>
+        </section>
+    </main>
+
+    <footer>
+        <nav>
+            <a href="index.html">Back to Index</a> | 
+            <a href="chapter4.html">Next Chapter: Problem Solving and Search</a>
+        </nav>
+    </footer>
+</body>
+</html>

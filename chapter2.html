@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 2: Intelligent Agents</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Chapter 2: Intelligent Agents</h1>
+        <nav>
+            <a href="index.html">Back to Index</a> | 
+            <a href="chapter3.html">Next Chapter</a>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>2.1 What is an Agent?</h2>
+            <p>An agent is anything that perceives its environment through sensors and acts upon that environment through actuators.</p>
+            <p><strong>Formal Definition:</strong><br>
+            An agent is an autonomous entity that uses sensors to observe its surroundings (percepts), and actuators to act in that environment.</p>
+        </section>
+
+        <section>
+            <h2>2.2 Agent-Environment Loop</h2>
+            <p>Here’s how an agent works:</p>
+            <pre>
+[ Environment ]
+      ↓ (percept)
++-----------------+
+|     Sensor      |
++-----------------+
+      ↓
++-----------------+
+|   Agent Logic   |
+| (decision-making) |
++-----------------+
+      ↓
++-----------------+
+|    Actuator     |
++-----------------+
+      ↓ (action)
+[ Environment changes ]
+            </pre>
+            <p>The agent continuously:</p>
+            <ul>
+                <li>Observes the environment (percepts)</li>
+                <li>Thinks (based on built-in rules or learning)</li>
+                <li>Acts to change the environment</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>2.3 What is a Rational Agent?</h2>
+            <p>A rational agent is one that does the right thing — i.e., it acts to maximize its performance measure based on the percept history and its knowledge.</p>
+        </section>
+
+        <section>
+            <h2>2.4 Performance Measures</h2>
+            <table>
+                <tr>
+                    <th>Agent</th>
+                    <th>Performance Measure</th>
+                </tr>
+                <tr>
+                    <td>Chess-playing AI</td>
+                    <td>Win the game</td>
+                </tr>
+                <tr>
+                    <td>Delivery Robot</td>
+                    <td>Deliver to correct location efficiently</td>
+                </tr>
+                <tr>
+                    <td>Email Classifier</td>
+                    <td>Correct spam detection rate</td>
+                </tr>
+                <tr>
+                    <td>Smart Vacuum</td>
+                    <td>Clean the floor quickly and thoroughly</td>
+                </tr>
+            </table>
+        </section>
+
+        <section>
+            <h2>2.5 The PEAS Framework</h2>
+            <p>PEAS = Performance measure, Environment, Actuators, Sensors. This framework helps you design or analyze an AI agent.</p>
+            <h3>Example: Autonomous Taxi</h3>
+            <table>
+                <tr>
+                    <th>Component</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>Performance</td>
+                    <td>Safe driving, fast delivery, obey traffic laws</td>
+                </tr>
+                <tr>
+                    <td>Environment</td>
+                    <td>Roads, traffic, passengers, pedestrians</td>
+                </tr>
+                <tr>
+                    <td>Actuators</td>
+                    <td>Steering, accelerator, brake, display, horn</td>
+                </tr>
+                <tr>
+                    <td>Sensors</td>
+                    <td>GPS, camera, radar, LiDAR, speedometer</td>
+                </tr>
+            </table>
+        </section>
+
+        <section>
+            <h2>2.6 Agent Types (with Diagrams)</h2>
+            <p>There are five standard types of agents, progressing in complexity:</p>
+            <ol>
+                <li><strong>Simple Reflex Agent:</strong> Acts only on current percept using IF-THEN rules.</li>
+                <li><strong>Model-Based Reflex Agent:</strong> Uses internal state (memory) to keep track of unseen parts of the world.</li>
+                <li><strong>Goal-Based Agent:</strong> Makes decisions to achieve a goal.</li>
+                <li><strong>Utility-Based Agent:</strong> Chooses the most desirable outcome when multiple goals exist.</li>
+                <li><strong>Learning Agent:</strong> Improves its performance over time through experience.</li>
+            </ol>
+        </section>
+
+        <section>
+            <h2>2.7 Summary Table: Agent Types</h2>
+            <table>
+                <tr>
+                    <th>Type</th>
+                    <th>Memory</th>
+                    <th>Goals</th>
+                    <th>Learning</th>
+                    <th>Example</th>
+                </tr>
+                <tr>
+                    <td>Simple Reflex</td>
+                    <td>❌</td>
+                    <td>❌</td>
+                    <td>❌</td>
+                    <td>Basic vacuum cleaner</td>
+                </tr>
+                <tr>
+                    <td>Model-Based Reflex</td>
+                    <td>✅</td>
+                    <td>❌</td>
+                    <td>❌</td>
+                    <td>Wumpus agent</td>
+                </tr>
+                <tr>
+                    <td>Goal-Based</td>
+                    <td>✅</td>
+                    <td>✅</td>
+                    <td>❌</td>
+                    <td>Maze-solving robot</td>
+                </tr>
+                <tr>
+                    <td>Utility-Based</td>
+                    <td>✅</td>
+                    <td>✅</td>
+                    <td>❌</td>
+                    <td>Route optimizer</td>
+                </tr>
+                <tr>
+                    <td>Learning Agent</td>
+                    <td>✅</td>
+                    <td>✅</td>
+                    <td>✅</td>
+                    <td>AI playing chess, spam filter</td>
+                </tr>
+            </table>
+        </section>
+
+        <section>
+            <h2>2.8 Common Exam Questions</h2>
+            <ol>
+                <li>Define an intelligent agent with two examples.</li>
+                <li>What are the differences between reflex and goal-based agents?</li>
+                <li>Explain the PEAS framework using an interactive tutor.</li>
+                <li>Draw and explain the architecture of a learning agent.</li>
+                <li>What makes a rational agent different from a rule-based agent?</li>
+            </ol>
+        </section>
+    </main>
+
+    <footer>
+        <nav>
+            <a href="index.html">Back to Index</a> | 
+            <a href="chapter3.html">Next Chapter: Task Environments</a>
+        </nav>
+    </footer>
+</body>
+</html>

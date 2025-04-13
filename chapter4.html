@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 4: Problem Solving and Search</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Chapter 4: Problem Solving and Search</h1>
+        <nav>
+            <a href="index.html">Back to Index</a> | 
+            <a href="chapter5.html">Next Chapter</a>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>4.1 What is Problem Solving in AI?</h2>
+            <p>AI agents often face situations where:</p>
+            <ul>
+                <li>The goal is known</li>
+                <li>The current state is known</li>
+                <li>But the steps to reach the goal are unknown</li>
+            </ul>
+            <p>In such cases, they search through a space of possible actions and outcomes to reach a solution.</p>
+        </section>
+
+        <section>
+            <h2>4.2 Components of a Problem</h2>
+            <table>
+                <tr>
+                    <th>Component</th>
+                    <th>Description</th>
+                    <th>Example (8-puzzle)</th>
+                </tr>
+                <tr>
+                    <td>Initial State</td>
+                    <td>Starting point</td>
+                    <td>Tiles in a scrambled order</td>
+                </tr>
+                <tr>
+                    <td>Actions</td>
+                    <td>Possible moves from each state</td>
+                    <td>Slide left, right, up, down</td>
+                </tr>
+                <tr>
+                    <td>Transition Model</td>
+                    <td>Result of an action</td>
+                    <td>New arrangement of tiles after a move</td>
+                </tr>
+                <tr>
+                    <td>Goal Test</td>
+                    <td>Checks if current state = goal</td>
+                    <td>Are all tiles in order?</td>
+                </tr>
+                <tr>
+                    <td>Path Cost</td>
+                    <td>Cost for the solution (e.g., steps taken)</td>
+                    <td>Each move = 1 step</td>
+                </tr>
+            </table>
+        </section>
+
+        <section>
+            <h2>4.3 State Space</h2>
+            <p>The state space is the set of all possible configurations (states) the system can be in.</p>
+            <p>Example: In 8-puzzle, there are 9! = 362,880 possible states (positions of 9 tiles).</p>
+        </section>
+
+        <section>
+            <h2>4.4 Search Types: Informed vs. Uninformed</h2>
+            <table>
+                <tr>
+                    <th>Type</th>
+                    <th>Has Heuristic?</th>
+                    <th>Examples</th>
+                </tr>
+                <tr>
+                    <td>Uninformed</td>
+                    <td>❌</td>
+                    <td>BFS, DFS, UCS</td>
+                </tr>
+                <tr>
+                    <td>Informed</td>
+                    <td>✅</td>
+                    <td>Greedy, A* Search</td>
+                </tr>
+            </table>
+        </section>
+
+        <section>
+            <h2>4.5 Uninformed (Blind) Search Algorithms</h2>
+            <h3>Breadth-First Search (BFS)</h3>
+            <p>Explores the shallowest (closest to root) nodes first.</p>
+            <ul>
+                <li>Complete</li>
+                <li>Optimal (if cost = 1 per step)</li>
+                <li>Memory-intensive</li>
+            </ul>
+            <p>Time/Space Complexity: O(b<sup>d</sup>)</p>
+
+            <h3>Depth-First Search (DFS)</h3>
+            <p>Explores the deepest node first.</p>
+            <ul>
+                <li>Space-efficient</li>
+                <li>Not complete (can get stuck in infinite paths)</li>
+                <li>Not optimal</li>
+            </ul>
+            <p>Time Complexity: O(b<sup>m</sup>)</p>
+
+            <h3>Uniform Cost Search (UCS)</h3>
+            <p>Expands the node with the lowest path cost.</p>
+            <ul>
+                <li>Complete</li>
+                <li>Optimal</li>
+                <li>Slower if many nodes have equal costs</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>4.6 Informed (Heuristic) Search</h2>
+            <p>Informed search algorithms use problem-specific knowledge to guide the search.</p>
+            <h3>What is a Heuristic?</h3>
+            <p>A heuristic is a function that estimates the cost to reach the goal from a given node n.</p>
+            <p>Common Heuristics:</p>
+            <ul>
+                <li>8-puzzle: Number of misplaced tiles, or Manhattan distance</li>
+                <li>Pathfinding: Straight-line distance (Euclidean) to the goal</li>
+                <li>Word ladder: Number of letters that differ from goal word</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>4.7 Frequently Asked Exam Questions</h2>
+            <ol>
+                <li>Define BFS and explain how it differs from DFS.</li>
+                <li>Compare the performance of UCS vs. IDS.</li>
+                <li>Solve a simple state graph using UCS and list node expansions.</li>
+                <li>Explain iterative deepening search with an example.</li>
+            </ol>
+        </section>
+    </main>
+
+    <footer>
+        <nav>
+            <a href="index.html">Back to Index</a> | 
+            <a href="chapter5.html">Next Chapter: Constraint Satisfaction Problems</a>
+        </nav>
+    </footer>
+</body>
+</html>

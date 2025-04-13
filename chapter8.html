@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 8: Planning and PDDL</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Chapter 8: Planning and PDDL</h1>
+        <nav>
+            <a href="index.html">Back to Index</a> | 
+            <a href="chapter9.html">Next Chapter</a>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>8.1 What is AI Planning?</h2>
+            <p>Planning involves finding a sequence of actions to achieve a goal from an initial state.</p>
+            <p><strong>Key Characteristics:</strong></p>
+            <ul>
+                <li>Requires representation of states, actions, and goals</li>
+                <li>Actions have preconditions and effects</li>
+                <li>Deals with temporal reasoning and constraints</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>8.2 Planning Domain Definition Language (PDDL)</h2>
+            <p>Standard language for representing planning problems with:</p>
+            <ul>
+                <li><strong>Domain file:</strong> Defines predicates and actions</li>
+                <li><strong>Problem file:</strong> Defines objects, initial state, and goal</li>
+            </ul>
+            <pre>
+(define (domain blocksworld)
+  (:requirements :strips)
+  (:predicates (on ?x ?y) (clear ?x))
+  (:action move
+    :parameters (?from ?to)
+    :precondition (and (on ?from ?to) (clear ?from))
+    :effect (and (not (on ?from ?to)) (on ?from ?to))))
+            </pre>
+        </section>
+
+        <section>
+            <h2>8.3 Planning Algorithms</h2>
+            <table>
+                <tr>
+                    <th>Algorithm</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>STRIPS</td>
+                    <td>Classical planning with add/delete lists</td>
+                </tr>
+                <tr>
+                    <td>Partial-Order Planning</td>
+                    <td>Flexible ordering of plan steps</td>
+                </tr>
+                <tr>
+                    <td>GraphPlan</td>
+                    <td>Creates planning graph to find solutions</td>
+                </tr>
+                <tr>
+                    <td>HTN Planning</td>
+                    <td>Hierarchical decomposition of tasks</td>
+                </tr>
+            </table>
+        </section>
+
+        <section>
+            <h2>8.4 Frequently Asked Exam Questions</h2>
+            <ol>
+                <li>Compare classical planning with problem solving.</li>
+                <li>Write PDDL for a simple planning domain.</li>
+                <li>Explain how STRIPS represents actions.</li>
+                <li>What are the advantages of HTN planning?</li>
+                <li>Solve a blocksworld problem using planning techniques.</li>
+            </ol>
+        </section>
+    </main>
+
+    <footer>
+        <nav>
+            <a href="index.html">Back to Index</a> | 
+            <a href="chapter9.html">Next Chapter: Learning — Supervised, Unsupervised & Reinforcement</a>
+        </nav>
+    </footer>
+</body>
+</html>
